@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { CreateMission } from "../../../../common/Button/CreateMission";
 import activeSB from "../../../../assets/images/activesb.png";
 import inactiveSB from "../../../../assets/images/inactivesb.png";
 import "./MissionCard.css";
@@ -39,7 +40,11 @@ export function MissionCard() {
 
   return (
     <div className="mission-container">
-      <h2>Complete today's missions and earn points!</h2>
+      <h2>
+        Complete today's missions and earn points!
+        <CreateMission />
+      </h2>
+
       <div className="mission-list">
         {missions.map((mission) => (
           <button

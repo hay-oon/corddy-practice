@@ -1,0 +1,9 @@
+.create-mission {
+  padding: 8px 16px;
+  font-size: 20px;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  background-color: #ffa300;
+  color: white;
+}
