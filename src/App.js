@@ -1,22 +1,12 @@
-import { Header } from "./components/Header";
-import { Aside } from "./components/Aside";
-import { MissionCard } from "./components/MissionCard";
-import { Footer } from "./components/Footer";
-const mainContainer = {
-  display: "flex",
-  justifyContent: "space-between",
-  width: "1080px",
-  margin: "0px auto",
-};
+import { Header } from "./components/layout/Header/Header";
+import { Body } from "./components/layout/Body/Body";
+import { Footer } from "./components/layout/Footer/Footer";
 
 function App() {
   return (
     <>
       <Header />
-      <div style={mainContainer}>
-        <Aside />
-        <MissionCard />
-      </div>
+      <Body />
       <Footer />
     </>
   );

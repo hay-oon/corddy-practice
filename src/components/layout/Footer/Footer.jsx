@@ -1,4 +1,4 @@
-import { FooterButton } from "../common/FooterButton";
+import { FooterButton } from "./FooterButton";
 
 const flex = {
   display: "flex",
