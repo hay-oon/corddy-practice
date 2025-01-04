@@ -1,5 +1,16 @@
 import { useState } from "react";
-import { NavButton } from "../../../common/Button/NavButton";
+import "./Navigation.css";
+
+function NavButton({ children, isActive, onClick }) {
+  return (
+    <button
+      className={`nav-button ${!isActive ? "inactive" : ""}`}
+      onClick={onClick}
+    >
+      {children}
+    </button>
+  );
+}
 
 export function Navigation() {
   const [activeButton, setActiveButton] = useState("today");

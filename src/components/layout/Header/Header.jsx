@@ -6,7 +6,7 @@ export function Header() {
   return (
     <nav>
       <Navigation />
-      <div className="headerContents">
+      <div className="auth">
         <div>name</div>
         <LoginButton />
       </div>
