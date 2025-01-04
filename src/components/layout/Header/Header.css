@@ -1,4 +1,4 @@
-.headerContainer {
+nav {
   margin: 0 auto;
   max-width: 1080px;
   display: flex;
@@ -8,10 +8,10 @@
   padding-bottom: 50px;
   font-size: 20px;
   font-weight: 700;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid #e0e0e0;
 }
 .headerContents {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 15px;
 }

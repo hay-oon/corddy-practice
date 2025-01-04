@@ -1,12 +1,12 @@
-import { Header } from "./components/Header";
-import { Main } from "./components/Main";
-import { Footer } from "./components/Footer";
+import { Header } from "./components/layout/Header/Header";
+import { Body } from "./components/layout/Body/Body";
+import { Footer } from "./components/layout/Footer/Footer";
 
 function App() {
   return (
     <>
       <Header />
-      <Main />
+      <Body />
       <Footer />
     </>
   );

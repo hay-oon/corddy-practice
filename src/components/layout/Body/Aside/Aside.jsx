@@ -1,5 +1,5 @@
 import { Avatar } from "./Avatar";
-import "../styles/Aside.css";
+import "./Aside.css";
 
 export function Aside() {
   return (

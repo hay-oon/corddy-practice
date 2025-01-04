@@ -1,5 +1,5 @@
-import { Aside } from "../common/Aside";
-import { MissionCard } from "../common/MissionCard";
+import { Aside } from "./Aside/Aside";
+import { MissionCard } from "./MissionCard/MissionCard";
 
 const mainContainer = {
   display: "flex",
@@ -8,7 +8,7 @@ const mainContainer = {
   margin: "0px auto",
 };
 
-export function Main() {
+export function Body() {
   return (
     <div style={mainContainer}>
       <Aside />
