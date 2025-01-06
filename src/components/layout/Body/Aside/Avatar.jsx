@@ -13,7 +13,6 @@ const avatarImages = [corddy1, corddy2, corddy3, corddy4, corddy5];
 const avatarStatus = ["Baby", "Junior", "Senior", "Master", "Expert"];
 
 export function Avatar({ level }) {
-  // level이 배열 범위를 벗어나지 않도록 보호
   const safeLevel = Math.min(level, avatarImages.length - 1);
 
   return (

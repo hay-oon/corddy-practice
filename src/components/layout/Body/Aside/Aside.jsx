@@ -1,20 +1,14 @@
 import { Avatar } from "./Avatar";
 import "./Aside.css";
 
-export function Aside() {
-  const answerCount = 333;
-  const commentCount = 368;
-
-  const level = (answerCount + commentCount) / 10;
-
-  const levelPercentage = Math.min(level, 100); //- Math.min은 주어진 숫자들 중 가장 작은 값을 반환
+export function Aside({ level, answerCount, commentCount }) {
+  const levelPercentage = Math.min(level, 100);
 
   // 아바타 레벨계산 (1~5)
-  const avatarLevel = Math.floor(levelPercentage / 20);
+  const avatarLevel = Math.floor(level / 20);
 
   return (
     <div className="aside">
-      {/* <div className="speechBalloon">Go complete ~</div> */}
       <Avatar level={avatarLevel} />
       <div className="learningLevel">
         <div>Corddy's Learning Level</div>

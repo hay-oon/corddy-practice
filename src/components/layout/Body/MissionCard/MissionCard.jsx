@@ -4,7 +4,7 @@ import activeSB from "../../../../assets/images/activesb.png";
 import inactiveSB from "../../../../assets/images/inactivesb.png";
 import "./MissionCard.css";
 
-export function MissionCard() {
+export function MissionCard({ onMissionComplete }) {
   const [missions, setMissions] = useState([
     {
       id: 1,
@@ -30,11 +30,14 @@ export function MissionCard() {
 
   const handleMissionClick = (id) => {
     setMissions(
-      missions.map((mission) =>
-        mission.id === id
-          ? { ...mission, isCompleted: !mission.isCompleted }
-          : mission
-      )
+      missions.map((mission) => {
+        if (mission.id === id) {
+          const newCompleted = !mission.isCompleted;
+          onMissionComplete(newCompleted);
+          return { ...mission, isCompleted: newCompleted };
+        }
+        return mission;
+      })
     );
   };
 
@@ -54,7 +57,7 @@ export function MissionCard() {
           >
             <img
               src={mission.isCompleted ? activeSB : inactiveSB}
-              style={{ width: "40px" }}
+              width={40}
               alt={mission.title}
             />
             <h3>{mission.title}</h3>

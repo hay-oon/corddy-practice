@@ -1,0 +1,14 @@
+.main {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.mainContents {
+  width: 680px;
+}
+
+.sideContents {
+  width: 280px;
+}
