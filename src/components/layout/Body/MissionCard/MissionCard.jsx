@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { CreateMission } from "../../../../common/Button/CreateMission";
+import { CreateMissionButton } from "../../../../common/Button/CreateMissionButton";
 import activeSB from "../../../../assets/images/activesb.png";
 import inactiveSB from "../../../../assets/images/inactivesb.png";
 import "./MissionCard.css";
 
-export function MissionCard({ onMissionComplete }) {
+export function MissionCard({ onMissionComplete, setPage }) {
   const [missions, setMissions] = useState([
     {
       id: 1,
@@ -45,7 +45,9 @@ export function MissionCard({ onMissionComplete }) {
     <div className="mission-container">
       <h2>
         Complete today's missions and earn points!
-        <CreateMission />
+        <CreateMissionButton setPage={setPage}>
+          Create Mission
+        </CreateMissionButton>
       </h2>
 
       <div className="mission-list">

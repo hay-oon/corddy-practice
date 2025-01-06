@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { Aside } from "./Aside/Aside";
-import { MissionCard } from "./MissionCard/MissionCard";
-import "./Body.css";
+import { Aside } from "../components/layout/Body/Aside/Aside";
+import { MissionCard } from "../components/layout/Body/MissionCard/MissionCard";
+import "./Main.css";
 
-export function Body() {
+export function Main({ setPage }) {
   const [missionPoints, setMissionPoints] = useState(0);
   const answerCount = 331;
   const commentCount = 368;
@@ -19,7 +19,10 @@ export function Body() {
   return (
     <main className="main">
       <div className="mainContents">
-        <MissionCard onMissionComplete={handleMissionComplete} />
+        <MissionCard
+          onMissionComplete={handleMissionComplete}
+          setPage={setPage}
+        />
       </div>
       <div className="sideContents">
         <Aside

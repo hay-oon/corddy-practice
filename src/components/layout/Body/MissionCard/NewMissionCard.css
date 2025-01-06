@@ -1,0 +1,58 @@
+.mission-container h2 {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-align: left;
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+.mission-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2열 레이아웃 */
+  gap: 20px;
+  width: 680px;
+  height: 500px;
+  margin: 0 auto;
+}
+
+.mission-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+}
+
+.mission-card.active {
+  background-color: #f0efff;
+}
+
+.mission-card h3 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  white-space: pre-line;
+}
+
+.mission-card .description {
+  margin-top: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #acacb3;
+}
+
+.mission-card.active .description {
+  color: #5f52ff;
+}
